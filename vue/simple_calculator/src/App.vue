@@ -1,22 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app">
+    <TheCalculator />
+    <SimpleButtonVue />
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import TheCalculator from "./components/TheCalculator.vue";
+import SimpleButtonVue from "./components/SimpleButton.vue";
 
 export default {
-  name: "App",
+  name: "Calculator",
   components: {
-    HelloWorld,
+    TheCalculator,
+    SimpleButtonVue,
+  },
+  data() {
+    return {
+      displayValue: "0",
+    };
+  },
+  methods: {
+    handleInput(input) {},
   },
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
